@@ -26,7 +26,7 @@ class Timex(object):
         self.end_t = time.strftime("%H:%M:%S")
         et = self.secondsToStr(time.time() - self.start_time)
         f = open('timex.log','wa')
-        t = 'Execution time: %s %s start: %s end: %s cmd: %s ' % (et, msg, self.start_t, self.end_t, self.cmd)
+        t = 'Cmd: %s\nExecution time: %s %s start: %s end: %s  ' % (self.cmd, et, msg, self.start_t, self.end_t)
         f.write(t)
         f.close()
         return t
